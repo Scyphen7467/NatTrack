@@ -6,10 +6,16 @@ import journalRoutes from './routes/journal.js';
 import workoutRoutes from './routes/workout.js';
 import weightRoutes from './routes/weight.js';
 
-dotenv.config();
-const app = express();
+dotenv.config(); // Load env vars
+
+const app = express(); // <-- move this up
+
 app.use(cors());
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('🚀 Backend is live!');
+});
 
 app.use('/api/meal', mealRoutes);
 app.use('/api/journal', journalRoutes);
