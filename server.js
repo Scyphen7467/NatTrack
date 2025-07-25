@@ -22,7 +22,7 @@ app.use('/api/journal', journalRoutes);
 app.use('/api/workout', workoutRoutes);
 app.use('/api/weight', weightRoutes);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
